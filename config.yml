@@ -1,0 +1,56 @@
+dataset:
+  base_dir: "C:\\BoneAgeAssessment\\Route2\\dataset"
+  annotation:
+    train_img_name_csv: "C:\\BoneAgeAssessment\\Route2\\dataset\\annos\\train_img_name.csv"
+    # img_name
+    # name1.jpg
+    # name2.jpg
+    # ...
+    test_img_name_csv: "C:\\BoneAgeAssessment\\Route2\\dataset\\annos\\test_img_name.csv"
+    # img_name
+    # name1.jpg
+    # name2.jpg
+    # ...
+    val_img_name_csv: "C:\\BoneAgeAssessment\\Route2\\dataset\\annos\\test_img_name.csv"
+      # img_name
+      # name1.jpg
+    # name2.jpg
+    # ...
+    score_csv: "C:\\BoneAgeAssessment\\Route2\\dataset\\annos\\score.csv"
+    # img_name, score
+    # name1.jpg, 100
+    # name2.jpg, 200
+    # ..., ...
+    bone_label_csv: "C:\\BoneAgeAssessment\\Route2\\dataset\\annos\\bone_label.csv"
+    # img_name, bone_name, bone_label
+    # name1.jpg, RAO_GU, 1
+    # ..., ..., ...
+    cropped_img_name_csv: "C:\\BoneAgeAssessment\\Route2\\dataset\\annos\\cropped_img.csv"
+  img:
+    raw: "C:\\BoneAgeAssessment\\Route2\\dataset\\raw_img\\"
+    cropped: "C:\\BoneAgeAssessment\\Route2\\dataset\\image_crop_2\\"
+train:
+  backbone:
+    init_lr: 0.001
+    max_epochs: 300
+    batch_size: 32
+    input_size: 512
+    num_classes: 1000
+  roi:
+    init_lr: 0.001
+    max_epochs: 300
+    batch_size: 64
+    num_classes:
+      RAO_GU:
+      CHI_GU:
+      DI_I_ZHANG_GU:
+      DI_III_ZHANG_GU:
+      DI_V_ZHANG_GU:
+      DI_III_ZHONG_JIAN_ZHI_GU:
+      DI_V_ZHONG_JIAN_ZHI_GU:
+      DI_I_YUAN_DUAN_ZHI_GU:
+      DI_III_YUAN_DUAN_ZHI_GU:
+      DI_V_YUAN_DUAN_ZHI_GU:
+
+
+
