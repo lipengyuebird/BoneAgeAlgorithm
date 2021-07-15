@@ -11,7 +11,7 @@ dataset:
     # name1.jpg
     # name2.jpg
     # ...
-    val_img_name_csv: "C:\\BoneAgeAssessment\\Route2\\dataset\\annos\\test_img_name.csv"
+    val_img_name_csv: "C:\\BoneAgeAssessment\\Route2\\dataset\\annos\\val_img_name.csv"
       # img_name
       # name1.jpg
     # name2.jpg
@@ -35,22 +35,44 @@ train:
     max_epochs: 300
     batch_size: 32
     input_size: 512
-    num_classes: 1000
+    num_classes: 1001
+    model_dir: "C:\\BoneAgeAssessment\\Route2\\BoneAgeAlgorithm\\checkpoint\\"
   roi:
-    init_lr: 0.001
-    max_epochs: 300
-    batch_size: 64
-    num_classes:
-      RAO_GU:
-      CHI_GU:
-      DI_I_ZHANG_GU:
-      DI_III_ZHANG_GU:
-      DI_V_ZHANG_GU:
-      DI_III_ZHONG_JIAN_ZHI_GU:
-      DI_V_ZHONG_JIAN_ZHI_GU:
-      DI_I_YUAN_DUAN_ZHI_GU:
-      DI_III_YUAN_DUAN_ZHI_GU:
-      DI_V_YUAN_DUAN_ZHI_GU:
+    common:
+      init_lr: 0.001
+      max_epochs: 300
+      batch_size: 64
+      model_dir: "C:\\BoneAgeAssessment\\Route2\\BoneAgeAlgorithm\\checkpoint\\rois\\"
+    RAO_GU:
+      num_classes: 9
+      input_size: [160, 128]
+    CHI_GU:
+      num_classes: 8
+      input_size: [100, 120]
+    DI_I_ZHANG_GU:
+      num_classes: 9
+      input_size: [160, 128]
+    DI_III_ZHANG_GU:
+      num_classes: 9
+      input_size: [128, 128]
+    DI_V_ZHANG_GU:
+      num_classes: 9
+      input_size: [128, 128]
+    DI_III_ZHONG_JIAN_ZHI_GU:
+      num_classes: 9
+      input_size: [128, 128]
+    DI_V_ZHONG_JIAN_ZHI_GU:
+      num_classes: 9
+      input_size: [128, 128]
+    DI_I_YUAN_DUAN_ZHI_GU:
+      num_classes: 9
+      input_size: [128, 128]
+    DI_III_YUAN_DUAN_ZHI_GU:
+      num_classes: 9
+      input_size: [128, 128]
+    DI_V_YUAN_DUAN_ZHI_GU:
+      num_classes: 9
+      input_size: [128, 128]
 
 
 

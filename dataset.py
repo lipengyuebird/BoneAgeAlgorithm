@@ -6,6 +6,7 @@
 # @software : PyCharm
 
 from PIL import Image
+import numpy as np
 from torch.utils.data import Dataset
 from torch.utils.data.dataset import T_co
 from util.config_loader import config
@@ -49,6 +50,9 @@ class BackBoneDataSet(Dataset):
             raw_img = self.transform(raw_img)
 
         return raw_img, int(float(self.score_dict[self.raw_img_name_list[index]]))
+
+    # def one_hot(self, label, num_classes):
+    #     return np.array([0 if i != label else 1 for i in range(num_classes)])
 
 
 class ROIDataSet(Dataset):
